@@ -1,0 +1,41 @@
+{
+  "name": "shift-left-quality-engine",
+  "version": "1.0.0",
+  "description": "Shift-left quality engine - custom rule evaluation, cyclomatic complexity analysis, security pattern detection, pre-commit integration",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "lint": "eslint src/ tests/ --ext .ts",
+    "test": "jest --forceExit",
+    "test:unit": "jest --testPathPattern=tests/unit --forceExit",
+    "test:coverage": "jest --coverage --forceExit"
+  },
+  "keywords": ["shift-left", "static-analysis", "code-quality", "security", "complexity"],
+  "author": "Darrius Jones",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "js-yaml": "^4.1.0",
+    "winston": "^3.17.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.10.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

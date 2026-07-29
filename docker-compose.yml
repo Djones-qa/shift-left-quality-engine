@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  engine:
+    build: .
+    ports:
+      - '3006:3006'
+    environment:
+      - NODE_ENV=production
+      - PORT=3006
+      - LOG_LEVEL=info
+      - MAX_COMPLEXITY=10
+      - ENABLE_SECURITY=true
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://localhost:3006/api/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
